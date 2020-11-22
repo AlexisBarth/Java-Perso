@@ -1,10 +1,12 @@
 
+
+
 import java.util.Scanner; // Import Scanner Class
 import java.io.File;
 import java.io.FileNotFoundException;
 
 
-public class User {
+public class Admin extends User {
     //Attributs
     String name;
     int age;
@@ -16,13 +18,13 @@ public class User {
 
 
     //Constructeur
-    public User() {
-    name = "name";
+    public Admin() {
+    name = "admin";
     age = 30;
-    mail = "aa@bb.cc";
-    role = 2;
+    mail = "admin@admin.fr";
+    role = 1;
     isLogged = false;
-    password = "pass";
+    password = "admin";
     }
 
 
