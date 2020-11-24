@@ -32,7 +32,7 @@ public class User {
     // renvoi un message de connection et change le status connecté en true
     // renvoi un message d'erreur le cas échéan
 
-    public static void login() {
+    public void login() {
         String userName = "";
         String passWord = "";
 
@@ -43,9 +43,9 @@ public class User {
         System.out.println("Enter password:");
         passWord = input.nextLine();
 
-        if (userName.equals(User.name) && passWord.equals(User.password)) {
+        if (userName.equals(name) && passWord.equals(password)) {
             System.out.println("You are logged in");
-            User.islogged = true;
+            isLogged = true;
         } else 
         {
             System.out.println("Your are not logged in");
@@ -59,14 +59,14 @@ public class User {
         try {
             File objFile = new File ("Settings.txt");
             Scanner myReader = new Scanner (objFile);
-            While (myReader.hasNextLine()){
+            while (myReader.hasNextLine()){
                 String data = myReader.nextLine();
                 System.out.println(data);
             }
             myReader.close();
         } catch (FileNotFoundException e) {
             System.out.println("Error Reading File");
-            e.printStrackTrace();
+            e.printStackTrace();
         }
 
     }

@@ -4,29 +4,16 @@ public class Main {
     String name = "toutou";
   
     public static void main(String[] args) {
-      Main myObj = new Main();
+      User myObj = new User();
       System.out.println(myObj.name);
+
+      myObj.login();
+      myObj.viewSettings();
     }
 
 
 
-    public static void authentification() {
-        String userName = "";
-        String passWord = "";
-        authentification Auth = new authentification();
 
-        Scanner input = new Scanner(System.in);
-
-       
-        System.out.println("Enter username:");
-        Auth.userName = input.nextLine();
-        System.out.println("Enter password:");
-        Auth.passWord = input.nextLine();
-        System.out.println("***************");
-        System.out.println("Name: " + Auth.userName);
-        System.out.println("Password: " + Auth.passWord);
-        
-    }
 }
 
 
